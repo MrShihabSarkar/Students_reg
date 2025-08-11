@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Base Styles for All Devices --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    /* Add padding for small screens */
+    box-sizing: border-box;
+}
+
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    width: 1250px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.welcome-section {
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+    background-blend-mode: multiply;
+    color: white;
+    padding: 60px 40px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.form-section {
+    padding: 40px;
+    width: 55%;
+    background: #fff;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.form-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+    background-blend-mode: multiply;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#responseMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* --- Responsive Styles for Tablets and Mobile Devices --- */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        /* Remove body padding on mobile for a full-screen experience */
+        align-items: flex-start;
+        /* Align form to the top on mobile */
+    }
+
+    .form-container {
+        flex-direction: column;
+        /* Stack the welcome and form sections vertically */
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        /* Remove border-radius for a full-screen look */
+        box-shadow: none;
+    }
+
+    .welcome-section {
+        width: 100%;
+        /* Make the welcome section full-width */
+        padding: 40px 25px;
+        /* Reduce padding for smaller screens */
+        text-align: center;
+    }
+
+    .welcome-section h2 {
+        font-size: 28px;
+        /* Slightly smaller heading on mobile */
+    }
+
+    .form-section {
+        width: 100%;
+        /* Make the form section full-width */
+        max-height: none;
+        /* Remove max-height to allow natural scrolling of the page */
+        overflow-y: visible;
+        /* Disable internal scrolling for the form section */
+        padding: 40px 25px;
+    }
+
+    .form-grid {
+        flex-direction: column;
+        /* Stack the form columns vertically */
+    }
+
+    .form-column {
+        width: 100%;
+        /* Each column now takes full width */
+    }
+}

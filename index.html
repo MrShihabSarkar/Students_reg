@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Login Container -->
+    <div id="loginContainer" class="form-wrapper">
+        <div class="form-container">
+            <div class="welcome-section">
+                <h2>students Registration Form</h2>
+                <p>Please log in to access your secure contact form and manage your data seamlessly.</p>
+            </div>
+            <div class="form-section">
+                <h3>Admin Login</h3>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="formContainer" class="form-wrapper hidden">
+        <div class="form-container">
+            <div class="welcome-section">
+                <h2>Student Details</h2>
+                <p>Please fill out the form accurately to register the student's information in the database.</p>
+            </div>
+            <div class="form-section">
+                <h3>New Student Registration</h3>
+                <form id="studentForm">
+                    <div class="form-grid">
+                        <!-- Left Column -->
+                        <div class="form-column">
+                            <div class="input-group"><input type="text" name="fullName" placeholder="Full Name"
+                                    required></div>
+                            <div class="input-group"><input type="text" name="fatherName" placeholder="Father's Name"
+                                    required></div>
+                            <div class="input-group"><input type="text" name="motherName" placeholder="Mother's Name"
+                                    required></div>
+                            <div class="input-group"><input type="text" name="dob" placeholder="Date of Birth"
+                                    onfocus="(this.type='date')" onblur="(this.type='text')" required></div>
+                            <div class="input-group">
+                                <select name="gender" required>
+                                    <option value="" disabled selected>Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <select name="bloodGroup" required>
+                                    <option value="" disabled selected>Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                            <div class="input-group"><input type="text" name="nationality" placeholder="Nationality"
+                                    value="Bangladeshi" required></div>
+                            <div class="input-group">
+                                <select name="religion" required>
+                                    <option value="Islam" selected>Islam</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Christian">Christian</option>
+                                    <option value="Buddhist">Buddhist</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="form-column">
+                            <div class="input-group"><input type="text" name="address" placeholder="Address" required>
+                            </div>
+                            <div class="input-group"><input type="number" name="contactNumber"
+                                    placeholder="Contact Number" required></div>
+                            <div class="input-group"><input type="number" name="studentId" placeholder="Roll Number"
+                                    required></div>
+                            <div class="input-group">
+                                <select name="classGrade" required>
+                                    <option value="" disabled selected>Class</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                    <option value="4">Four</option>
+                                    <option value="5">Five</option>
+                                    <option value="6">Six</option>
+                                    <option value="7">Seven</option>
+                                    <option value="8">Eight</option>
+                                    <option value="9">Nine</option>
+                                    <option value="10">Ten</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <select name="section" required>
+                                    <option value="" disabled selected>Section</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                </select>
+                            </div>
+                            <div class="input-group"><input type="text" name="schoolName"
+                                    placeholder="School / College Name" required></div>
+                            <div class="input-group"><input type="text" name="emergencyContact"
+                                    placeholder="Emergency Contact Name & Number" required></div>
+                            <div class="input-group">
+                                <select name="guardianOccupation" required>
+                                    <option value="" disabled selected>Guardian's Occupation</option>
+                                    <option value="Farmer">Farmer</option>
+                                    <option value="Businessman">Businessman</option>
+                                    <option value="Doctor">Doctor</option>
+                                    <option value="Engineer">Engineer</option>
+                                    <option value="Teacher">Teacher</option>
+                                    <option value="Government Job">Government Job</option>
+                                    <option value="Private Job">Private Job</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit button spans full width below the columns -->
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <p id="responseMessage"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
