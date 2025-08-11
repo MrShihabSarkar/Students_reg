@@ -5,16 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const studentForm = document.getElementById('studentForm');
     const responseMessage = document.getElementById('responseMessage');
 
-    // --- Login Logic ---
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // --- IMPORTANT ---
-        const shihab = 'shihab';
-        const sarkar = '427586';
-        if (username === shihab && password === sarkar) {
+        if (username === 'shihab' && password === '427586') {
             loginContainer.classList.add('hidden');
             formContainer.classList.remove('hidden');
         } else {
@@ -54,4 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 5000);
             });
     });
+
 });
