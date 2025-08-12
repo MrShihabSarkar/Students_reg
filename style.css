@@ -155,7 +155,7 @@ input::placeholder {
     .welcome-section {
         width: 100%;
         /* Make the welcome section full-width */
-        padding: 40px 25px;
+        padding: 40px 15px;
         /* Reduce padding for smaller screens */
         text-align: center;
     }
@@ -184,4 +184,5 @@ input::placeholder {
         width: 100%;
         /* Each column now takes full width */
     }
+
 }
